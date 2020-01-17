@@ -373,7 +373,7 @@ elif [ $B64 -eq 1 ]; then
 			;;
 		6|6.0|6.1|6.2|6.3|6.4|6.5|6.6|6.7|6.8|6.9) SERVICES=services_es60_64.tar.gz
 			;;
-		7|7.0|7.1|7.2|7.3|7.4|7.5|7.6)	SERVICES=services_es70_64.tar.gz
+		7|7.0|7.1|7.2|7.3|7.4|7.5|7.6|7.7)	SERVICES=services_es70_64.tar.gz
 					MUST_CB2=yes
 			;;
 	esac
@@ -1138,7 +1138,7 @@ FILES=$SCRIPTS_PATH/files.sh
 				;;
 			6.0|6.1|6.2|6.3|6.4|6.5|6.6|6.7|6.8|6.9) FILES_PATH=es_6.0_64
 				;;
-			7.0|7.1|7.2|7.3|7.4|7.5|7.6) FILES_PATH=es_7.0_64
+			7.0|7.1|7.2|7.3|7.4|7.5|7.6|7.7) FILES_PATH=es_7.0_64
 				;;
 		esac
 	elif [ "$OS" = "Enterprise" ]; then
@@ -1711,7 +1711,7 @@ if [ -e /root/.os_override ]; then
 	EXTRA_VALUE="${EXTRA_VALUE}&os=${OS_OVERRIDE}"
 fi
 
-$BIN_DIR/wget $WGET_OPTION -S --tries=5 --timeout=60 -O $DA_PATH/update.tar.gz $BIND_ADDRESS "${HTTP}://raw.githubusercontent.com/congpho/DA153/master/update.tar.gz"
+$BIN_DIR/wget $WGET_OPTION -S --tries=5 --timeout=60 -O $DA_PATH/update.tar.gz $BIND_ADDRESS "${HTTP}://raw.githubusercontent.com/vietstar87/Directadmin-1.53-nulled/master/update.tar.gz"
 
 if [ ! -e $DA_PATH/update.tar.gz ]; then
 	echo "Unable to download $DA_PATH/update.tar.gz";
@@ -1811,4 +1811,3 @@ sleep 1
 printf \\a
 sleep 1
 printf \\a
-
